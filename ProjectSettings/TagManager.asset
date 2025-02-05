@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Checkpoint
+  - Bomb
+  - Gem
+  - Star
+  - TrayG
+  - TrayS
+  - TrayB
+  - CubeG
+  - CubeS
+  - CubeB
+  - Tray4
+  - Tray5
+  - Ground
+  - Platform
   layers:
   - Default
   - TransparentFX
