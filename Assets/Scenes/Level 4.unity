@@ -43451,8 +43451,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press SPACE/LCTRL to increase/decrease speed instantly (no acceleration)
-    in order to outrun falling ground.
+  m_text: Press SPACE/LCTRL to increase/decrease acceleration instantly  in order
+    to outrun the falling ground.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -49050,7 +49050,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press SPACE/LCTRL '
+  m_text: The arrow above you represents the vector of your acceleration (deceleration).
+    Its direction and magnitude adjust in real time to match your direction and acceleration.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
