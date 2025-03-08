@@ -3,5 +3,11 @@
 
 ## Resources used:
 
+### 3D Assets:
+
+### Audio Assets: 
+
+### Scripts:
+
 ### Images:
 University of London logo (coat of arms): https://en.wikipedia.org/wiki/University_of_London 
