@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Credits : MonoBehaviour
@@ -8,12 +10,16 @@ public class Credits : MonoBehaviour
 
     private RectTransform rectTransform;
 
+    public GameObject creditsScreen, welcomeScreen;
+    
+
 
     // Start is called before the first frame update
     void Start()
     {
         // Get the RectTransform component of the UI element
         rectTransform = GetComponent<RectTransform>();
+ 
     }
 
     // Update is called once per frame
@@ -21,5 +27,14 @@ public class Credits : MonoBehaviour
     {
         // Move the text upwards over time
         rectTransform.anchoredPosition += new Vector2(0, scrollSpeed * Time.deltaTime);
+
+        if (Input.anyKey)
+        {
+            rectTransform.anchoredPosition = new Vector2(0, -600);
+
+            creditsScreen.SetActive(false);
+            welcomeScreen.SetActive(true);
+
+        }
     }
 }
