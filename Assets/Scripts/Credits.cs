@@ -11,7 +11,9 @@ public class Credits : MonoBehaviour
     private RectTransform rectTransform;
 
     public GameObject creditsScreen, welcomeScreen;
-    
+
+    private float startingTime = Time.time;
+
 
 
     // Start is called before the first frame update
@@ -28,7 +30,7 @@ public class Credits : MonoBehaviour
         // Move the text upwards over time
         rectTransform.anchoredPosition += new Vector2(0, scrollSpeed * Time.deltaTime);
 
-        if (Input.anyKey)
+        if (Input.anyKey || (Time.time - startingTime) >= 60)
         {
             rectTransform.anchoredPosition = new Vector2(0, -600);
 
