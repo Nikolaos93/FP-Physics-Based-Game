@@ -34,4 +34,13 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt("SavedHighScore", scoreN); // save the high score
         }
     }
+
+    // Function that clears the player prefs (high score)
+    public void ClearPlayerPrefs()
+    {
+        highScoreN = 0; // reset the high score
+        PlayerPrefs.SetInt("SavedHighScore", 0); // reset the high score in player prefs
+        highScoreT.text = "" + highScoreN.ToString(); // reset the high score text
+    }
+
 }

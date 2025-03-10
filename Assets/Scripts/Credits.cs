@@ -12,7 +12,7 @@ public class Credits : MonoBehaviour
 
     public GameObject creditsScreen, welcomeScreen;
 
-    private float startingTime = Time.time;
+    private float startingTime;
 
 
 
@@ -21,7 +21,9 @@ public class Credits : MonoBehaviour
     {
         // Get the RectTransform component of the UI element
         rectTransform = GetComponent<RectTransform>();
- 
+
+        startingTime = Time.time;
+
     }
 
     // Update is called once per frame
