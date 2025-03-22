@@ -332,6 +332,27 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // incrementing the build index
     }
 
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void LoadLevel3()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void LoadLevel4()
+    {
+        SceneManager.LoadScene(3);
+    }
+    public void LoadLevel5()
+    {
+        SceneManager.LoadScene(4);
+    }
+    public void LoadLevel6()
+    {
+        SceneManager.LoadScene(5);
+    }
+
     public void ExitGame() // This method will be called when the player clicks the "Exit" button
     {
         #if UNITY_EDITOR
