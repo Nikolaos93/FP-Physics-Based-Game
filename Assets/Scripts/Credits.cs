@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Credits : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Credits : MonoBehaviour
 
     private float startingTime;
 
+    //private GameManager gameManager; // This is the GameManager script that checks if the game is active
 
 
     // Start is called before the first frame update
@@ -23,6 +25,8 @@ public class Credits : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
 
         startingTime = Time.time;
+
+        //gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>(); // Finding the GameManager and getting the GameManager script from it
 
     }
 
@@ -34,11 +38,13 @@ public class Credits : MonoBehaviour
 
         if (Input.anyKey || (Time.time - startingTime) >= 60)
         {
-            rectTransform.anchoredPosition = new Vector2(0, -600);
+            /*rectTransform.anchoredPosition = new Vector2(0, -600);
 
             creditsScreen.SetActive(false);
-            welcomeScreen.SetActive(true);
+            welcomeScreen.SetActive(true);*/
 
+            //gameManager.RestartGame();
+            SceneManager.LoadScene(0); // Replace Application.LoadLevel with SceneManager.LoadScene
         }
     }
 }
