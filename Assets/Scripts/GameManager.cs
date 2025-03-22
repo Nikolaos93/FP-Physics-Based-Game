@@ -272,7 +272,12 @@ public class GameManager : MonoBehaviour
             finishGameButton.gameObject.SetActive(true);
             gameCompleteText.gameObject.SetActive(true);
             gameResultsText.gameObject.SetActive(true);
-            gameResultsText.text = "Score: so far (" + scoreSoFar + ") + lives left: (200*" + DataManager.Instance.livesLeft + ") + level (100) + " + "collectables (" + collectablePoints + ") + " + "hints (90 - 30*" + hintClicks + " used) = " + score;
+            gameResultsText.text = "Score:" + Environment.NewLine + "so far (" + scoreSoFar + ")" + Environment.NewLine + "+" + Environment.NewLine +
+                                   "lives left (200*" + DataManager.Instance.livesLeft + ")" + Environment.NewLine + "+" + Environment.NewLine +
+                                   "level completion (100)" + Environment.NewLine + "+" + Environment.NewLine +
+                                   "collectables (" + collectablePoints + ")" + Environment.NewLine + "+" + Environment.NewLine +
+                                   "hints (90 - 30*" + hintClicks + " used)" + Environment.NewLine +
+                                   "=" + Environment.NewLine + score;
 
             ScoreManager.instance.HighScoreCheck(score); 
         }
