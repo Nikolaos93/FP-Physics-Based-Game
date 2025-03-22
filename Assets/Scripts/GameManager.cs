@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
@@ -248,7 +249,12 @@ public class GameManager : MonoBehaviour
             nextLevelButton.gameObject.SetActive(true);
             levelCompleteText.gameObject.SetActive(true);
             levelResultsText.gameObject.SetActive(true);
-            levelResultsText.text = "Score: so far (" + scoreSoFar + ") + level (100) + " + "collectables (" + collectablePoints + ") + timer (" + (int)timer + ") + " + "hints (90 - 30*" + hintClicks + " used) = " + score;
+            levelResultsText.text = "Score:" + Environment.NewLine + "so far (" + scoreSoFar + ")" + Environment.NewLine + "+" + Environment.NewLine + 
+                                    "level completion (100)" + Environment.NewLine + "+" + Environment.NewLine + 
+                                    "collectables (" + collectablePoints + ")" + Environment.NewLine + "+" + Environment.NewLine + 
+                                    "timer (" + (int)timer + ")" + Environment.NewLine + " + " + Environment.NewLine + 
+                                    "hints (90 - 30*" + hintClicks + " used)" + Environment.NewLine + 
+                                    "=" + Environment.NewLine + score;
         }
         
 
