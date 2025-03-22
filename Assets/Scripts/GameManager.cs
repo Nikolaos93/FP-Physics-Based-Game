@@ -360,6 +360,11 @@ public class GameManager : MonoBehaviour
     public void hintClicking() // Method for tracking the number of hints used
     {
         hintClicks++; // incrementing the number of hints used
+
+        if (isGameActive) // checking whether the game is active
+        {
+            isGameActive = false; // Flagging the game state as inactive/false
+        }
     }
 
 }
