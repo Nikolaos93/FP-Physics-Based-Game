@@ -16,6 +16,7 @@ public class DataManager : MonoBehaviour
     public float ambientMusicVolume;
     public float sfxVolume;
     public bool dayNight;
+    //public bool fpsIsON;
 
     private void Awake()
     {
