@@ -22922,7 +22922,7 @@ MonoBehaviour:
   fpsText: {fileID: 357645275}
   showFPS: 1
   updateInterval: 0.5
-  fpsToggle: {fileID: 0}
+  fpsToggle: {fileID: 481672422}
 --- !u!114 &1014140663
 MonoBehaviour:
   m_ObjectHideFlags: 0
