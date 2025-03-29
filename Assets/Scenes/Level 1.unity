@@ -17505,6 +17505,7 @@ MonoBehaviour:
   brightnessSlider: {fileID: 777912902}
   brightnessTextValue: {fileID: 1784637001}
   defaultBrightness: 1
+  sceneLight: {fileID: 410087040}
   resolutionDropdown: {fileID: 1245634671}
 --- !u!4 &562376079
 Transform:
@@ -25149,9 +25150,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1457848213}
   m_Direction: 0
   m_MinValue: 0.5
-  m_MaxValue: 1.5
+  m_MaxValue: 3
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -52519,7 +52520,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1.0
+  m_text: 2.0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0ae5b3e425972a04c82852bb7763f523, type: 2}
   m_sharedMaterial: {fileID: 2927700946667150721, guid: 0ae5b3e425972a04c82852bb7763f523,

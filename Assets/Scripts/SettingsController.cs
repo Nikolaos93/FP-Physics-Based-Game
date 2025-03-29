@@ -12,7 +12,8 @@ public class SettingsController : MonoBehaviour
     [Header("Graphics Settings")]
     [SerializeField] private Slider brightnessSlider = null;
     [SerializeField] private TMP_Text brightnessTextValue = null;
-    [SerializeField] private float defaultBrightness = 1;
+    [SerializeField] private float defaultBrightness = 2;
+    [SerializeField] private Light sceneLight;
 
     // Variables that store graphics settings data
     private int _qualityLevel;
@@ -62,6 +63,9 @@ public class SettingsController : MonoBehaviour
     {
         _brightnessLevel = brightness;
         brightnessTextValue.text = brightness.ToString("0.0");
+
+        //PlayerPrefs.SetFloat("masterBrightness", _brightnessLevel);?????
+        sceneLight.intensity = _brightnessLevel;
     }
 
     public void SetFullScreen(bool isFullscreen)
