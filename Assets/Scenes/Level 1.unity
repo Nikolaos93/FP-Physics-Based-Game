@@ -255,6 +255,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341238}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &670117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3858995680371424911, guid: 51a084e4035b24e76997744a50c711d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 4701409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1832686
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +494,7 @@ PrefabInstance:
     - target: {fileID: 3858995680371424911, guid: 51a084e4035b24e76997744a50c711d4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3858995680632013777, guid: 51a084e4035b24e76997744a50c711d4,
         type: 3}
@@ -14810,7 +14816,13 @@ MonoBehaviour:
   life3: {fileID: 1536783207}
   highscoreText: {fileID: 1330819924}
   dayNightToggle: {fileID: 513378850}
+  vfxToggle: {fileID: 11381120}
   collectablePoints: 0
+  dayUpperDome: {fileID: 1474365490}
+  dayLowerDome: {fileID: 472596996}
+  nightUpperDome: {fileID: 584067296}
+  nightLowerDome: {fileID: 670117}
+  visualEffect: {fileID: 1166530217}
 --- !u!4 &437686336
 Transform:
   m_ObjectHideFlags: 0
@@ -16540,31 +16552,7 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1474365490}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 472596996}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 1
 --- !u!1 &526275729
 GameObject:
@@ -18550,6 +18538,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578519943}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &584067296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3858995680371424911, guid: 51a084e4035b24e76997744a50c711d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 992985429}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &586142592 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2635966689240429768, guid: ee10bc00b35c64842bab7e72bfe8743f,
@@ -31417,7 +31411,7 @@ PrefabInstance:
     - target: {fileID: 3858995680371424911, guid: 51a084e4035b24e76997744a50c711d4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3858995680632013777, guid: 51a084e4035b24e76997744a50c711d4,
         type: 3}
@@ -43444,8 +43438,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 868169060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.6, y: 0}
+  m_AnchorMax: {x: 0.6, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -43653,7 +43647,7 @@ RectTransform:
   m_Father: {fileID: 1411521781}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.6, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -59371,6 +59365,7 @@ MonoBehaviour:
   ambientMusicVolume: 0.3
   sfxVolume: 0.33
   dayNight: 1
+  vfxON: 1
 --- !u!4 &1963552586
 Transform:
   m_ObjectHideFlags: 0

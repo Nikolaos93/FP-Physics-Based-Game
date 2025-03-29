@@ -62,9 +62,17 @@ public class GameManager : MonoBehaviour
     private PlayerController playerController;
 
     public Toggle dayNightToggle; // Reference to the toggle (in settings menu) for enabling/disabling day/night
+    public Toggle vfxToggle;
 
     public int collectablePoints;
     private int scoreSoFar;
+
+    public GameObject dayUpperDome;
+    public GameObject dayLowerDome;
+    public GameObject nightUpperDome;
+    public GameObject nightLowerDome;
+
+    public GameObject visualEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -93,6 +101,17 @@ public class GameManager : MonoBehaviour
             dayNightToggle.isOn = false; // Disabling it if the stored value is false
         }
 
+        Debug.Log(DataManager.Instance.vfxON);
+        Debug.Log(vfxToggle.isOn);
+        if (DataManager.Instance.vfxON == true) // Checking stored setting/value for toggle in DataManager
+        {
+            vfxToggle.isOn = true; // Enabling it if the stored value is true
+        }
+        if (DataManager.Instance.vfxON == false) // Checking stored setting/value for toggle in DataManager
+        {
+            vfxToggle.isOn = false; // Disabling it if the stored value is false
+        }
+
 
         collectablePoints = 0;
         Debug.Log("Collectable Points: " + collectablePoints);
@@ -106,10 +125,29 @@ public class GameManager : MonoBehaviour
         if (dayNightToggle.isOn) // checking if the day/night toggle is on
         {
             DataManager.Instance.dayNight = true; // if it is storing value "true" in DataManager
+            dayUpperDome.SetActive(true); // enabling the upper dome for day
+            dayLowerDome.SetActive(true); // enabling the lower dome for day
+            nightUpperDome.SetActive(false); // disabling the upper dome for night
+            nightLowerDome.SetActive(false); // disabling the lower dome for night
         }
         if (!dayNightToggle.isOn) // checking if the day/night toggle is off
         {
             DataManager.Instance.dayNight = false; // if it is storing value "false" in DataManager
+            dayUpperDome.SetActive(false); // disabling the upper dome for day
+            dayLowerDome.SetActive(false); // disabling the lower dome for day
+            nightUpperDome.SetActive(true); // enabling the upper dome for night
+            nightLowerDome.SetActive(true); // enabling the lower dome for night
+        }
+
+        if (vfxToggle.isOn == true) // checking if the VFX toggle is on
+        {
+            DataManager.Instance.vfxON = true; // if it is storing value "true" in DataManager
+            visualEffect.SetActive(true); // enabling the visual effect
+        }
+        if (vfxToggle.isOn == false) // checking if the VFX toggle is off
+        {
+            DataManager.Instance.vfxON = false; // if it is storing value "false" in DataManager
+            visualEffect.SetActive(false); // disabling the visual effect
         }
 
         if (Input.GetKeyDown(KeyCode.Escape)) //checking if Esc was pressed

@@ -64,7 +64,7 @@ public class SettingsController : MonoBehaviour
         _brightnessLevel = brightness;
         brightnessTextValue.text = brightness.ToString("0.0");
 
-        //PlayerPrefs.SetFloat("masterBrightness", _brightnessLevel);?????
+        PlayerPrefs.SetFloat("masterBrightness", _brightnessLevel);
         sceneLight.intensity = _brightnessLevel;
     }
 
