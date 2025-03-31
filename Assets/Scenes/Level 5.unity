@@ -2547,6 +2547,7 @@ GameObject:
   - component: {fileID: 114868845}
   - component: {fileID: 114868849}
   - component: {fileID: 114868844}
+  - component: {fileID: 114868851}
   - component: {fileID: 114868850}
   m_Layer: 0
   m_Name: Player
@@ -2700,24 +2701,45 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114868843}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c44ba890b63d18b40be1574184896556, type: 3}
+  m_Script: {fileID: 11500000, guid: ed48ac350b214aa4db87152365478485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRb: {fileID: 114868849}
-  speed: 2
+  player: {fileID: 0}
+  playerRb: {fileID: 0}
+  speed: 0
+  acceleration: 1
   totalDistance: 0
-  velocityText: {fileID: 814610395}
-  distanceText: {fileID: 1441903925}
-  accelerationText: {fileID: 2113809184}
+  velocityText: {fileID: 0}
+  distanceText: {fileID: 0}
+  accelerationText: {fileID: 0}
   checkpointReached: 0
   playerAs: {fileID: 0}
-  tray1: 0
-  tray2: 0
-  tray3: 0
-  tray4: 0
-  tray5: 0
+  isOnGround: 1
+  jumpForce: 0
+  jumpSound: {fileID: 0}
+--- !u!114 &114868851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114868843}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c0f216b7b82c844b872ebecc17a1d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRb: {fileID: 0}
+  speed: 5
+  speedOfRiver: 5
+  totalDistance: 0
+  velocityText: {fileID: 0}
+  distanceText: {fileID: 0}
+  speedOfRiverText: {fileID: 0}
+  checkpointReached: 0
+  waterSplashParticle: {fileID: 0}
 --- !u!1001 &116476079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9555,6 +9577,10 @@ MonoBehaviour:
   life2: {fileID: 1667651174}
   life3: {fileID: 2033144256}
   highscoreText: {fileID: 0}
+  playerController: {fileID: 114868844}
+  playerController3: {fileID: 114868851}
+  playerController4: {fileID: 114868850}
+  playerController5: {fileID: 1403613289}
   dayNightToggle: {fileID: 513378850}
   vfxToggle: {fileID: 1839636716}
   collectablePoints: 0
@@ -24383,6 +24409,8 @@ MonoBehaviour:
   - {fileID: 1540479818}
   fallingGroundsC: []
   fallingGroundsZ: []
+  playerController: {fileID: 0}
+  playerController4: {fileID: 0}
 --- !u!4 &1208153527
 Transform:
   m_ObjectHideFlags: 0
@@ -28108,7 +28136,6 @@ GameObject:
   - component: {fileID: 1403613292}
   - component: {fileID: 1403613288}
   - component: {fileID: 1403613291}
-  - component: {fileID: 1403613290}
   - component: {fileID: 1403613289}
   - component: {fileID: 1403613293}
   m_Layer: 0
@@ -28164,31 +28191,6 @@ MonoBehaviour:
   tray3: 0
   tray4: 0
   tray5: 0
---- !u!114 &1403613290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403613287}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1bd53e70a31e1643be6358bf3aa1c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerRb: {fileID: 114868849}
-  speed: 2
-  forwardInput: 0
-  totalDistance: 0
-  velocityText: {fileID: 814610395}
-  distanceText: {fileID: 1441903925}
-  accelerationText: {fileID: 2113809184}
-  checkpointReached: 0
-  playerAs: {fileID: 0}
-  isOnGround: 1
-  jumpForce: 0
-  jumpSound: {fileID: 0}
 --- !u!54 &1403613291
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -38839,6 +38841,10 @@ MonoBehaviour:
   life2: {fileID: 0}
   life3: {fileID: 0}
   highscoreText: {fileID: 0}
+  playerController: {fileID: 0}
+  playerController3: {fileID: 0}
+  playerController4: {fileID: 0}
+  playerController5: {fileID: 0}
   dayNightToggle: {fileID: 0}
   vfxToggle: {fileID: 0}
   collectablePoints: 0
@@ -43562,6 +43568,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 114868848}
   - {fileID: 15463048}
   - {fileID: 330585546}
   - {fileID: 410087041}
@@ -43571,7 +43578,6 @@ SceneRoots:
   - {fileID: 2102515216}
   - {fileID: 134247918}
   - {fileID: 220090385}
-  - {fileID: 114868848}
   - {fileID: 1403613292}
   - {fileID: 3051168572487064073}
   - {fileID: 4406198538393902868}

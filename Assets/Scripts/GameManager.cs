@@ -60,7 +60,9 @@ public class GameManager : MonoBehaviour
     public TMP_Text highscoreText;
 
     public PlayerController playerController;
+    public PlayerController3 playerController3;
     public PlayerController4 playerController4;
+    public PlayerController5 playerController5;
 
 
     public Toggle dayNightToggle; // Reference to the toggle (in settings menu) for enabling/disabling day/night
@@ -240,11 +242,11 @@ public class GameManager : MonoBehaviour
             // Activating relevant screens/texts/buttons depending on the checkpoint
             checkpointScreen.gameObject.SetActive(true);
             checkpointText.gameObject.SetActive(true);
-            if (playerController.checkpointReached == 1 || playerController4.checkpointReached == 1)
+            if (playerController.checkpointReached == 1 || playerController3.checkpointReached == 1 || playerController4.checkpointReached == 1 || playerController5.checkpointReached == 1)
             {
                 checkpointAdviceText.gameObject.SetActive(true);
             }
-            else if (playerController.checkpointReached == 2 || playerController4.checkpointReached == 2)
+            else if (playerController.checkpointReached == 2 || playerController3.checkpointReached == 2 || playerController4.checkpointReached == 2 || playerController5.checkpointReached == 2)
             {
                 checkpointAdviceText.gameObject.SetActive(false);
                 checkpointAdvice2Text.gameObject.SetActive(true);
@@ -258,11 +260,11 @@ public class GameManager : MonoBehaviour
             // Disabling relevant screens/texts/buttons depending on the checkpoint
             checkpointScreen.gameObject.SetActive(false);
             checkpointText.gameObject.SetActive(false);
-            if (playerController.checkpointReached == 1 || playerController4.checkpointReached == 1)
+            if (playerController.checkpointReached == 1 || playerController3.checkpointReached == 1 || playerController4.checkpointReached == 1 || playerController5.checkpointReached == 1)
             {
                 checkpointAdviceText.gameObject.SetActive(false);
             }
-            else if (playerController.checkpointReached == 2 || playerController4.checkpointReached == 2)
+            else if (playerController.checkpointReached == 2 || playerController3.checkpointReached == 2 || playerController4.checkpointReached == 2 || playerController5.checkpointReached == 2)
             {
                 checkpointAdvice2Text.gameObject.SetActive(false);
             }

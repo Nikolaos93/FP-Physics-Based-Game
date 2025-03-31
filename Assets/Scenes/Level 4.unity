@@ -3852,6 +3852,8 @@ GameObject:
   - component: {fileID: 114868845}
   - component: {fileID: 114868849}
   - component: {fileID: 114868844}
+  - component: {fileID: 114868850}
+  - component: {fileID: 114868851}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3997,6 +3999,52 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114868850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114868843}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c0f216b7b82c844b872ebecc17a1d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRb: {fileID: 0}
+  speed: 5
+  speedOfRiver: 5
+  totalDistance: 0
+  velocityText: {fileID: 0}
+  distanceText: {fileID: 0}
+  speedOfRiverText: {fileID: 0}
+  checkpointReached: 0
+  waterSplashParticle: {fileID: 0}
+--- !u!114 &114868851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114868843}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44ba890b63d18b40be1574184896556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRb: {fileID: 0}
+  speed: 2
+  totalDistance: 0
+  velocityText: {fileID: 0}
+  distanceText: {fileID: 0}
+  accelerationText: {fileID: 0}
+  checkpointReached: 0
+  playerAs: {fileID: 0}
+  tray1: 0
+  tray2: 0
+  tray3: 0
+  tray4: 0
+  tray5: 0
 --- !u!1 &128555562
 GameObject:
   m_ObjectHideFlags: 0
@@ -8108,7 +8156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &290532250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13428,7 +13476,9 @@ MonoBehaviour:
   life3: {fileID: 730033381}
   highscoreText: {fileID: 886734491}
   playerController: {fileID: 114868844}
+  playerController3: {fileID: 114868850}
   playerController4: {fileID: 416956953}
+  playerController5: {fileID: 114868851}
   dayNightToggle: {fileID: 513378850}
   vfxToggle: {fileID: 1914648557}
   collectablePoints: 0
@@ -57433,7 +57483,9 @@ MonoBehaviour:
   life3: {fileID: 0}
   highscoreText: {fileID: 0}
   playerController: {fileID: 0}
+  playerController3: {fileID: 0}
   playerController4: {fileID: 0}
+  playerController5: {fileID: 0}
   dayNightToggle: {fileID: 0}
   vfxToggle: {fileID: 0}
   collectablePoints: 0
