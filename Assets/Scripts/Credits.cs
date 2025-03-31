@@ -11,7 +11,7 @@ public class Credits : MonoBehaviour
 
     private RectTransform rectTransform;
 
-    public GameObject creditsScreen, welcomeScreen;
+    public GameObject creditsScreen/*, welcomeScreen*/;
 
     private float startingTime;
 
@@ -44,7 +44,15 @@ public class Credits : MonoBehaviour
             welcomeScreen.SetActive(true);*/
 
             //gameManager.RestartGame();
-            SceneManager.LoadScene(0); // Replace Application.LoadLevel with SceneManager.LoadScene
+            if (SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                SceneManager.LoadScene(0);
+            }
+            else
+            {
+                creditsScreen.SetActive(false);
+            }
+            
         }
     }
 }
