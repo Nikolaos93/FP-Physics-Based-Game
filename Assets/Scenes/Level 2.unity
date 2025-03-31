@@ -942,6 +942,7 @@ MonoBehaviour:
   brightnessTextValue: {fileID: 507400694}
   defaultBrightness: 1
   sceneLight: {fileID: 410087040}
+  fullScreenToggle: {fileID: 709151213}
   resolutionDropdown: {fileID: 741540}
 --- !u!4 &54725992
 Transform:
@@ -6169,6 +6170,10 @@ MonoBehaviour:
   life2: {fileID: 1421307998}
   life3: {fileID: 2140022716}
   highscoreText: {fileID: 0}
+  playerController: {fileID: 0}
+  playerController3: {fileID: 0}
+  playerController4: {fileID: 0}
+  playerController5: {fileID: 0}
   dayNightToggle: {fileID: 513378850}
   vfxToggle: {fileID: 1479460899}
   collectablePoints: 0
@@ -26099,6 +26104,10 @@ MonoBehaviour:
   life2: {fileID: 0}
   life3: {fileID: 0}
   highscoreText: {fileID: 0}
+  playerController: {fileID: 0}
+  playerController3: {fileID: 0}
+  playerController4: {fileID: 0}
+  playerController5: {fileID: 0}
   dayNightToggle: {fileID: 0}
   vfxToggle: {fileID: 0}
   collectablePoints: 0

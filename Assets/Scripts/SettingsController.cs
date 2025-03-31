@@ -1,4 +1,4 @@
-// Thisscript is inspired by this youtube tutorial: https://www.youtube.com/watch?v=Cq_Nnw_LwnI
+// This script is inspired by this youtube tutorial: https://www.youtube.com/watch?v=Cq_Nnw_LwnI
 
 using System.Collections;
 using System.Collections.Generic;
@@ -14,6 +14,7 @@ public class SettingsController : MonoBehaviour
     [SerializeField] private TMP_Text brightnessTextValue = null;
     [SerializeField] private float defaultBrightness = 2;
     [SerializeField] private Light sceneLight;
+    [SerializeField] private Toggle fullScreenToggle;
 
     // Variables that store graphics settings data
     private int _qualityLevel;
@@ -74,6 +75,7 @@ public class SettingsController : MonoBehaviour
 
         PlayerPrefs.SetInt("masterFullScreen", (_isFullScren ? 1 : 0));
         Screen.fullScreen = _isFullScren;
+        fullScreenToggle.isOn = _isFullScren;
     }
 
     public void SetQuality(int qualityIndex)
@@ -100,5 +102,55 @@ public class SettingsController : MonoBehaviour
     }*/
 
 
+    private void Awake()
+    {
+        /*_brightnessLevel = PlayerPrefs.GetFloat("masterBrightness", defaultBrightness);
+        brightnessSlider.value = _brightnessLevel;
+        sceneLight.intensity = _brightnessLevel;
 
+        _qualityLevel = PlayerPrefs.GetInt("masterQuality", 2);
+        _isFullScren = PlayerPrefs.GetInt("masterFullScreen", 1) == 1;*/
+
+        if (PlayerPrefs.HasKey("masterBrightness"))
+        {
+            _brightnessLevel = PlayerPrefs.GetFloat("masterBrightness");
+            brightnessSlider.value = _brightnessLevel;
+            sceneLight.intensity = _brightnessLevel;
+        }
+        else
+        {
+            _brightnessLevel = defaultBrightness;
+            brightnessSlider.value = _brightnessLevel;
+            sceneLight.intensity = _brightnessLevel;
+        }
+
+        if (PlayerPrefs.HasKey("masterQuality"))
+        {
+            _qualityLevel = PlayerPrefs.GetInt("masterQuality");
+            QualitySettings.SetQualityLevel(_qualityLevel);
+        }
+        else
+        {
+            _qualityLevel = 2;
+            QualitySettings.SetQualityLevel(_qualityLevel);
+        }
+
+        if (PlayerPrefs.HasKey("masterFullScreen"))
+        {
+            if (PlayerPrefs.GetInt("masterFullScreen") == 1)
+            {
+                _isFullScren = true;
+                Screen.fullScreen = _isFullScren;
+                fullScreenToggle.isOn = _isFullScren;
+            }
+            else
+            {
+                _isFullScren = false;
+                Screen.fullScreen = _isFullScren;
+                fullScreenToggle.isOn = _isFullScren;
+            }
+            
+        }
+
+    }
 }

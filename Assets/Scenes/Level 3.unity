@@ -22973,6 +22973,7 @@ MonoBehaviour:
   brightnessTextValue: {fileID: 456210750}
   defaultBrightness: 1
   sceneLight: {fileID: 410087040}
+  fullScreenToggle: {fileID: 1881929992}
   resolutionDropdown: {fileID: 2083713116}
 --- !u!4 &1014140664
 Transform:
