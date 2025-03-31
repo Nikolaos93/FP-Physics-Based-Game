@@ -38,6 +38,12 @@ public class GoldenManager : MonoBehaviour
             Instantiate(goldenExplosionParticle, transform.position, goldenExplosionParticle.transform.rotation); // Playing the particle effect once to indicate that cube is put in the right place
             //Debug.Log("Tray 5" + playerController5.tray5);
         }
+        if (collision.gameObject.CompareTag("Tray4") && gameObject.CompareTag("CubeG")) // If the right tray (2nd stage) collides with the golden cube
+        {
+            playerController5.tray4 = true; // Marking that golden cube is on the correct tray
+            Instantiate(goldenExplosionParticle, transform.position, goldenExplosionParticle.transform.rotation); // Playing the particle effect once to indicate that cube is put in the right place
+            //Debug.Log("Tray 5" + playerController5.tray5);
+        }
     }
 
 }

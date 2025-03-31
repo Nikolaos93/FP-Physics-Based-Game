@@ -47245,7 +47245,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'LEVEL 6
 
-    Gravity & Energy Preservation'
+    Gravity & Energy Conservation'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0ae5b3e425972a04c82852bb7763f523, type: 2}
   m_sharedMaterial: {fileID: 2927700946667150721, guid: 0ae5b3e425972a04c82852bb7763f523,

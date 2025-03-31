@@ -47,6 +47,16 @@ public class SilverManager : MonoBehaviour
                 //Debug.Log("Tray 4" + playerController5.tray4);
             }
         }
+        if (collision.gameObject.CompareTag("Tray5") && gameObject.CompareTag("CubeS")) // If the right tray (2nd stage) collides with the silver cube
+        {
+            silverCheck1 = true; // Marking that silver cube is on the correct tray
+            Instantiate(silverExplosionParticle, transform.position, silverExplosionParticle.transform.rotation); // Playing the particle effect once to indicate that cube is put in the right place
+            if (silverCheck1 && bronzeManager.bronzeCheck1) // Checicking if both silver and bronze cubes have been put on the same tray
+            {
+                playerController5.tray5 = true; // if both cubes are on the tray activating the tray
+                //Debug.Log("Tray 4" + playerController5.tray4);
+            }
+        }
     }
 
 }
